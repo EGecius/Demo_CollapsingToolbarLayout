@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Demo_CollapsingToolbarLayout</string>
+    <string name="content_text">This is content within NestedScrollView</string>
+</resources>
