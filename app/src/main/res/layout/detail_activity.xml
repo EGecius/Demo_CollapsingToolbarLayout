@@ -6,24 +6,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="bottom"
     android:fitsSystemWindows="true">
+
+    <!-- APPBAR -->
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginStart="48dp"
+            android:fitsSystemWindows="true"
             app:expandedTitleMarginEnd="64dp"
-            android:fitsSystemWindows="true">
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -38,23 +40,23 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:textSize="18sp"
-                    android:textColor="@android:color/white"
+                    android:layout_height="48dp"
                     android:layout_alignParentBottom="true"
-                    android:text="Name Surname"
-                    android:gravity="center_vertical"
                     android:background="@android:color/holo_orange_light"
-                    android:layout_height="48dp"/>
+                    android:gravity="center_vertical"
+                    android:text="Name Surname"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"/>
 
             </RelativeLayout>
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="?attr/actionBarSize"
                 android:background="@android:color/holo_blue_light"
-                android:text="Monday, 27 March"
                 android:gravity="center_vertical"
                 android:paddingLeft="50dp"
+                android:text="Monday, 27 March"
                 android:textColor="@android:color/white"
                 android:textSize="24sp"
                 app:layout_collapseMode="pin"/>
@@ -83,16 +85,41 @@
             android:layout_width="match_parent"
             android:layout_height="800dp"
             android:background="@android:color/holo_green_light"
+            android:paddingBottom="70dp"
             tools:ignore="NewApi">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="@string/content_text"/>
+                android:layout_height="500dp"
+                android:gravity="bottom"
+                android:text="@string/content_text"
+                android:textSize="18sp"/>
 
         </FrameLayout>
 
     </android.support.v4.widget.NestedScrollView>
+
+    <!-- BUTTONS -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="no"/>
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="yes"/>
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
